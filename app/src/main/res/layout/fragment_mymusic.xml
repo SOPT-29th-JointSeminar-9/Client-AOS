@@ -13,6 +13,7 @@
         android:layout_height="0dp"
         android:text="@string/mymusic"
         android:textSize="30sp"
+        android:fontFamily="@font/applesdcothicneo"
         android:layout_marginHorizontal="100dp"
         android:layout_marginVertical="100dp"
         app:layout_constraintBottom_toBottomOf="parent"
