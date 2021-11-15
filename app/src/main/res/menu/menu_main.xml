@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/menu_home"
+        android:icon="@drawable/ic_main_home"
+        android:title="@string/home"/>
+
+    <item
+        android:id="@+id/menu_heart"
+        android:icon="@drawable/ic_main_foryou"
+        android:title="@string/foryou"/>
+
+    <item
+        android:id="@+id/menu_search"
+        android:icon="@drawable/ic_main_search"
+        android:title="@string/serach"/>
+
+    <item
+        android:id="@+id/menu_mymusic"
+        android:icon="@drawable/ic_main_mymusic"
+        android:title="@string/mymusic"/>
+
+
+    <item
+        android:id="@+id/menu_menu"
+        android:icon="@drawable/ic_main_menu"
+        android:title="@string/menu"/>
+
+
+
+</menu>
