@@ -1,4 +1,4 @@
-package com.example.seminar5.ui
+package com.example.seminar5.ui.bottom
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -6,25 +6,26 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.example.seminar5.R
-import com.example.seminar5.databinding.FragmentForyouBinding
+import com.example.seminar5.databinding.FragmentMymusicBinding
 
 
-class ForyouFragment : Fragment() {
-    private var _binding : FragmentForyouBinding?= null
-    private val binding get () = _binding ?: error("뷰 참조를 위해 바인딩이 초기화되지 않았음")
+class MymusicFragment : Fragment() {
+    private var _binding : FragmentMymusicBinding ?= null
+    private val binding get() = _binding ?: error("뷰 참조를 위해 바인딩이 초기화되지 않음")
 
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        _binding = FragmentForyouBinding.inflate(
-            inflater,
-            container,
-            false
-        )
+       _binding = FragmentMymusicBinding.inflate(
+           inflater,
+           container,
+           false
+       )
         return binding.root
     }
+
 
     override fun onDestroy() {
         super.onDestroy()

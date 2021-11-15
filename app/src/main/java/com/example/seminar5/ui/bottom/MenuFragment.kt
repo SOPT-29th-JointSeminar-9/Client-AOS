@@ -1,4 +1,4 @@
-package com.example.seminar5.ui
+package com.example.seminar5.ui.bottom
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment

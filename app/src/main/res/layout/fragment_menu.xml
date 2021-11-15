@@ -5,7 +5,7 @@
     android:id="@+id/frameLayout3"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.MenuFragment">
+    tools:context=".ui.bottom.MenuFragment">
     <ImageView
         android:id="@+id/btn_back"
         android:layout_width="wrap_content"
@@ -34,10 +34,14 @@
         android:id="@+id/tl_top"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        tools:ignore="SpeakableTextPresentCheck"
+        app:tabSelectedTextColor="@color/genie_black"
+        app:tabIndicatorColor="@color/genie_black"
+        app:tabTextColor="@color/genie_black"
+        android:layout_marginEnd="201dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_musichug"
-        tools:ignore="SpeakableTextPresentCheck"
         >
     </com.google.android.material.tabs.TabLayout>
 
@@ -46,7 +50,6 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
-
         app:layout_constraintTop_toBottomOf="@id/tl_top" />
 
 

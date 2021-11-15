@@ -1,4 +1,4 @@
-package com.example.seminar5.ui
+package com.example.seminar5.ui.bottom
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -6,10 +6,11 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.example.seminar5.R
-import com.example.seminar5.databinding.FragmentHomeBinding
+import com.example.seminar5.databinding.FragmentSearchBinding
 
-class HomeFragment : Fragment() {
-    private var _binding : FragmentHomeBinding ?= null
+
+class SearchFragment : Fragment() {
+    private var _binding : FragmentSearchBinding ?= null
     private val binding get() = _binding ?: error("뷰 참조를 위해 바인딩이 초기화되지 않음")
 
 
@@ -17,7 +18,7 @@ class HomeFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        _binding = FragmentHomeBinding.inflate(
+        _binding = FragmentSearchBinding.inflate(
             inflater,
             container,
             false
@@ -29,7 +30,6 @@ class HomeFragment : Fragment() {
         super.onDestroy()
         _binding = null
     }
-
 
 
 }
