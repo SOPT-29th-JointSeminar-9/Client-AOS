@@ -7,6 +7,13 @@
     <string name="serach">검색</string>
     <string name="mymusic">내음악</string>
     <string name="menu">전체메뉴</string>
+
+
+    <!-- menu fragment -->
+    <string name="musichug">뮤직허그</string>
+    <string name="djchat">DJ차트</string>
+    <string name="friend">친구</string>
+
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

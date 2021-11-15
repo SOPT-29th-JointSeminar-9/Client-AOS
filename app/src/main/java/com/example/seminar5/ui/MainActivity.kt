@@ -4,7 +4,6 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.seminar5.R
 import com.example.seminar5.databinding.ActivityMainBinding
-import com.example.seminar5.ui.menu.MenuFragment
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
