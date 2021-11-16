@@ -1,5 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/YULIM/JointSeminar-9/Client-AOS/app/src/main/res/font/applesdcothicneo.xml" value="0.13518518518518519" />
+        <entry key="..\:/YULIM/JointSeminar-9/Client-AOS/app/src/main/res/layout/activity_main.xml" value="0.2598958333333333" />
+        <entry key="..\:/YULIM/JointSeminar-9/Client-AOS/app/src/main/res/layout/fragment_djchat.xml" value="0.2598958333333333" />
+        <entry key="..\:/YULIM/JointSeminar-9/Client-AOS/app/src/main/res/layout/fragment_foryou.xml" value="0.2598958333333333" />
+        <entry key="..\:/YULIM/JointSeminar-9/Client-AOS/app/src/main/res/layout/fragment_friend.xml" value="0.2598958333333333" />
+        <entry key="..\:/YULIM/JointSeminar-9/Client-AOS/app/src/main/res/layout/fragment_home.xml" value="0.2921875" />
+        <entry key="..\:/YULIM/JointSeminar-9/Client-AOS/app/src/main/res/layout/fragment_inhome.xml" value="0.33" />
+        <entry key="..\:/YULIM/JointSeminar-9/Client-AOS/app/src/main/res/layout/fragment_menu.xml" value="0.2598958333333333" />
+        <entry key="..\:/YULIM/JointSeminar-9/Client-AOS/app/src/main/res/layout/fragment_mymusic.xml" value="0.2921875" />
+        <entry key="..\:/YULIM/JointSeminar-9/Client-AOS/app/src/main/res/layout/fragment_search.xml" value="0.2921875" />
+        <entry key="..\:/YULIM/JointSeminar-9/Client-AOS/app/src/main/res/layout/item_popularity_list.xml" value="0.26515151515151514" />
+        <entry key="..\:/YULIM/JointSeminar-9/Client-AOS/app/src/main/res/menu/menu_main.xml" value="0.1" />
+      </map>
+    </option>
+  </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="JDK" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
