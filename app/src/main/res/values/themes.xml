@@ -14,4 +14,13 @@
         <!-- Customize your theme here. -->
         <item name="android:includeFontPadding">false</item>
     </style>
+
+    <style name="Theme.Seminar5.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="Theme.Seminar5.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="Theme.Seminar5.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 </resources>
