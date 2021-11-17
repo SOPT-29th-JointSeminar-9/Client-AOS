@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/iv_now_cover"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_now_room_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="9dp"
+        android:text="TextView"
+        android:textColor="@color/genie_black"
+        android:textSize="14sp"
+        app:layout_constraintStart_toEndOf="@+id/iv_now_cover"
+        app:layout_constraintTop_toTopOf="@+id/iv_now_cover" />
+
+    <ImageView
+        android:id="@+id/iv_volumebar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_volumebar"
+        android:layout_marginTop="2dp"
+        app:layout_constraintStart_toStartOf="@+id/tv_now_room_title"
+        app:layout_constraintTop_toBottomOf="@+id/tv_now_room_title" />
+
+    <TextView
+        android:id="@+id/tv_now_music"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="6dp"
+        android:text="TextView"
+        android:textColor="@color/genie_gray_4"
+        android:textSize="11sp"
+        app:layout_constraintStart_toEndOf="@+id/iv_volumebar"
+        app:layout_constraintTop_toTopOf="@+id/iv_volumebar" />
+
+    <TextView
+        android:id="@+id/tv_now_user"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="TextView"
+        android:textColor="@color/genie_gray_4"
+        android:textSize="9sp"
+        app:layout_constraintStart_toStartOf="@+id/iv_volumebar"
+        app:layout_constraintTop_toBottomOf="@+id/iv_volumebar" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="9dp"
+        android:text="|"
+        android:textColor="@color/genie_gray_4"
+        android:textSize="9sp"
+        app:layout_constraintStart_toEndOf="@+id/tv_now_user"
+        app:layout_constraintTop_toTopOf="@+id/tv_now_user" />
+
+    <TextView
+        android:id="@+id/tv_now_fan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="9dp"
+        android:text="팬"
+        android:textColor="@color/genie_gray"
+        android:textSize="9sp"
+        app:layout_constraintStart_toEndOf="@+id/textView5"
+        app:layout_constraintTop_toTopOf="@+id/textView5" />
+
+    <TextView
+        android:id="@+id/tv_now_fan_amount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="1dp"
+        android:text="TextView"
+        android:textColor="@color/genie_main"
+        android:textSize="9sp"
+        app:layout_constraintStart_toEndOf="@+id/tv_now_fan"
+        app:layout_constraintTop_toTopOf="@+id/tv_now_fan" />
+
+    <TextView
+        android:id="@+id/tv_now_listener"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="9dp"
+        android:text="청취자수"
+        android:textColor="@color/genie_gray"
+        android:textSize="9sp"
+        app:layout_constraintStart_toEndOf="@+id/tv_now_fan_amount"
+        app:layout_constraintTop_toTopOf="@+id/tv_now_fan_amount" />
+
+    <TextView
+        android:id="@+id/tv_now_listener_amount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="3dp"
+        android:text="TextView"
+        android:textColor="@color/genie_main"
+        android:textSize="9sp"
+        app:layout_constraintStart_toEndOf="@+id/tv_now_listener"
+        app:layout_constraintTop_toTopOf="@+id/tv_now_listener" />
+</androidx.constraintlayout.widget.ConstraintLayout>
