@@ -18,6 +18,12 @@
     <!--inhome fragment-->
     <string name="popularity">실시간 인기</string>
     <string name="now">최신</string>
+    <string name="create">개설하기</string>
+
+    <!--item_list-->
+    <string name="fan">팬</string>
+    <string name="listener">청취자수</string>
+
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
