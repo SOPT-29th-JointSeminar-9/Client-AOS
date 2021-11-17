@@ -3,7 +3,12 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="322dp"
-    android:layout_height="100dp">
+    android:layout_height="100dp"
+    android:layout_marginStart="1dp"
+    android:layout_marginTop="8dp"
+    android:layout_marginRight="1dp"
+    android:layout_marginBottom="8dp"
+    android:background="@drawable/bg_rv_now">
 
     <ImageView
         android:id="@+id/iv_now_cover"
@@ -19,12 +24,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="9dp"
-        tools:text="room title"
         android:fontFamily="@font/applesdcothicneo"
         android:textColor="@color/genie_black"
         android:textSize="14sp"
         app:layout_constraintStart_toEndOf="@+id/iv_now_cover"
-        app:layout_constraintTop_toTopOf="@+id/iv_now_cover" />
+        app:layout_constraintTop_toTopOf="@+id/iv_now_cover"
+        tools:text="room title" />
 
     <ImageView
         android:id="@+id/iv_volumebar"
@@ -40,32 +45,32 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="6dp"
-        tools:text="now_music"
         android:fontFamily="@font/applesdcothicneo"
         android:textColor="@color/genie_gray_4"
         android:textSize="11sp"
         app:layout_constraintStart_toEndOf="@+id/iv_volumebar"
-        app:layout_constraintTop_toTopOf="@+id/iv_volumebar" />
+        app:layout_constraintTop_toTopOf="@+id/iv_volumebar"
+        tools:text="now_music" />
 
     <TextView
         android:id="@+id/tv_now_user"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
-        tools:text="user"
         android:fontFamily="@font/applesdcothicneo"
         android:textColor="@color/genie_gray_4"
         android:textSize="9sp"
         app:layout_constraintStart_toStartOf="@+id/iv_volumebar"
-        app:layout_constraintTop_toBottomOf="@+id/iv_volumebar" />
+        app:layout_constraintTop_toBottomOf="@+id/iv_volumebar"
+        tools:text="user" />
 
     <TextView
         android:id="@+id/textView5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="9dp"
-        android:text="|"
         android:fontFamily="@font/applesdcothicneo"
+        android:text="|"
         android:textColor="@color/genie_gray_4"
         android:textSize="9sp"
         app:layout_constraintStart_toEndOf="@+id/tv_now_user"
@@ -76,8 +81,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="9dp"
-        android:text="팬"
         android:fontFamily="@font/applesdcothicneo"
+        android:text="팬"
         android:textColor="@color/genie_gray"
         android:textSize="9sp"
         app:layout_constraintStart_toEndOf="@+id/textView5"
@@ -88,20 +93,20 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="1dp"
-        tools:text="fan"
         android:fontFamily="@font/applesdcothicneo"
         android:textColor="@color/genie_main"
         android:textSize="9sp"
         app:layout_constraintStart_toEndOf="@+id/tv_now_fan"
-        app:layout_constraintTop_toTopOf="@+id/tv_now_fan" />
+        app:layout_constraintTop_toTopOf="@+id/tv_now_fan"
+        tools:text="fan" />
 
     <TextView
         android:id="@+id/tv_now_listener"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="9dp"
-        android:text="청취자수"
         android:fontFamily="@font/applesdcothicneo"
+        android:text="청취자수"
         android:textColor="@color/genie_gray"
         android:textSize="9sp"
         app:layout_constraintStart_toEndOf="@+id/tv_now_fan_amount"
@@ -112,10 +117,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="3dp"
-        tools:text="listener"
         android:fontFamily="@font/applesdcothicneo"
         android:textColor="@color/genie_main"
         android:textSize="9sp"
         app:layout_constraintStart_toEndOf="@+id/tv_now_listener"
-        app:layout_constraintTop_toTopOf="@+id/tv_now_listener" />
+        app:layout_constraintTop_toTopOf="@+id/tv_now_listener"
+        tools:text="listener" />
 </androidx.constraintlayout.widget.ConstraintLayout>
