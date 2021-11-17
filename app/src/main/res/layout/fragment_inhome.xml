@@ -7,18 +7,20 @@
     android:layout_height="match_parent"
     tools:context=".ui.home.InHomeFragment">
 
-    <ScrollView
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/scrollview"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_marginBottom="35dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/linearLayout"
+            android:id="@+id/view"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="match_parent">
 
             <TextView
                 android:id="@+id/tv_popularity"
@@ -40,6 +42,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="14dp"
                 android:layout_marginTop="20dp"
+                android:nestedScrollingEnabled="false"
                 android:orientation="horizontal"
                 app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -52,6 +55,9 @@
                 android:id="@+id/btn_create"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="19dp"
+                android:layout_marginTop="27dp"
+                android:layout_marginEnd="19dp"
                 android:background="@drawable/rectangle_blue"
                 android:defaultFocusHighlightEnabled="true"
                 android:drawableStart="@drawable/ic_headset"
@@ -59,12 +65,9 @@
                 android:fontFamily="@font/applesdcothicneo"
                 android:paddingLeft="117dp"
                 android:stateListAnimator="@null"
-                android:text="개설하기"
+                android:text="@string/create"
                 android:textColor="@color/white"
                 android:textSize="15sp"
-                android:layout_marginStart="19dp"
-                android:layout_marginTop="27dp"
-                android:layout_marginEnd="19dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/rv_popularity" />
@@ -82,11 +85,54 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/btn_create" />
 
+            <TextView
+                android:id="@+id/tv_now_cnt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:fontFamily="@font/applesdcothicneo"
+                android:text="25"
+                android:textColor="@color/genie_main"
+                android:textSize="19sp"
+                app:layout_constraintStart_toEndOf="@+id/tv_now"
+                app:layout_constraintTop_toTopOf="@+id/tv_now" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_now"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="18dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="18dp"
+                android:nestedScrollingEnabled="false"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_now"
+                tools:itemCount="7"
+                tools:listitem="@layout/item_now_list">
+
+            </androidx.recyclerview.widget.RecyclerView>
+
+            <ImageView
+                android:id="@+id/iv_up"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="157dp"
+                android:layout_marginTop="40dp"
+                android:layout_marginEnd="154dp"
+                android:clickable="true"
+                android:src="@drawable/ic_up"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/rv_now" />
+
+
         </androidx.constraintlayout.widget.ConstraintLayout>
 
 
+    </androidx.core.widget.NestedScrollView>
 
-    </ScrollView>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
