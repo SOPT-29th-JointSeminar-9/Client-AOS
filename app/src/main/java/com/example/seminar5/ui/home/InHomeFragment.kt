@@ -16,8 +16,6 @@ class InHomeFragment : Fragment() {
     private lateinit var nowAdapter: NowAdapter
     private var _binding: FragmentInhomeBinding? = null
     private val binding get() = _binding ?: error("에러에러")
-    private lateinit var tabViewPager: TabViewPager
-
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -29,14 +27,14 @@ class InHomeFragment : Fragment() {
             false
         )
 
-        initAdapter()
-        initAdapter2()
+        initPopularityAdapter()
+        initNowAdapter()
+        btnUp()
 
         return binding.root
     }
 
-
-    private fun initAdapter() {
+    private fun initPopularityAdapter() {
         popularityAdapter = PopularityAdapter()
 
         binding.rvPopularity.adapter = popularityAdapter
@@ -93,11 +91,9 @@ class InHomeFragment : Fragment() {
             )
         )
         popularityAdapter.notifyDataSetChanged()
-
     }
 
-    private fun initAdapter2() {
-
+    private fun initNowAdapter() {
         nowAdapter = NowAdapter()
 
         binding.rvNow.adapter = nowAdapter
@@ -179,11 +175,14 @@ class InHomeFragment : Fragment() {
         nowAdapter.notifyDataSetChanged()
     }
 
+    private fun btnUp() {
+        binding.ivUp.setOnClickListener {
+            binding.scrollview.scrollTo(0, binding.view.top)
+        }
+    }
 
     override fun onDestroy() {
         super.onDestroy()
         _binding = null
     }
-
-
 }

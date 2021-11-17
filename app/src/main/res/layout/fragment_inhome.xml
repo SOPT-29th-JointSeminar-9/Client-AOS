@@ -8,6 +8,7 @@
     tools:context=".ui.home.InHomeFragment">
 
     <androidx.core.widget.NestedScrollView
+        android:id="@+id/scrollview"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginBottom="35dp"
@@ -17,6 +18,7 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/view"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
@@ -119,6 +121,7 @@
                 android:layout_marginStart="157dp"
                 android:layout_marginTop="40dp"
                 android:layout_marginEnd="154dp"
+                android:clickable="true"
                 android:src="@drawable/ic_up"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
