@@ -65,7 +65,7 @@
         tools:text="user" />
 
     <TextView
-        android:id="@+id/textView5"
+        android:id="@+id/tv_slash"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="9dp"
@@ -82,11 +82,11 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="9dp"
         android:fontFamily="@font/applesdcothicneo"
-        android:text="팬"
+        android:text="@string/fan"
         android:textColor="@color/genie_gray"
         android:textSize="9sp"
-        app:layout_constraintStart_toEndOf="@+id/textView5"
-        app:layout_constraintTop_toTopOf="@+id/textView5" />
+        app:layout_constraintStart_toEndOf="@+id/tv_slash"
+        app:layout_constraintTop_toTopOf="@+id/tv_slash" />
 
     <TextView
         android:id="@+id/tv_now_fan_amount"
@@ -106,7 +106,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="9dp"
         android:fontFamily="@font/applesdcothicneo"
-        android:text="청취자수"
+        android:text="@string/listener"
         android:textColor="@color/genie_gray"
         android:textSize="9sp"
         app:layout_constraintStart_toEndOf="@+id/tv_now_fan_amount"

@@ -65,7 +65,7 @@
                 android:fontFamily="@font/applesdcothicneo"
                 android:paddingLeft="117dp"
                 android:stateListAnimator="@null"
-                android:text="개설하기"
+                android:text="@string/create"
                 android:textColor="@color/white"
                 android:textSize="15sp"
                 app:layout_constraintEnd_toEndOf="parent"
