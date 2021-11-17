@@ -13,4 +13,5 @@
     <color name="genie_shadow">#14000000</color>
     <color name="genie_gray_4">#5B5B5B</color>
     <color name="genie_gray_1">#F5F5F5</color>
+    <color name="bg_dialog">#BF000000</color>
 </resources>

@@ -1,5 +1,6 @@
 package com.example.seminar5.ui.home
 
+import android.app.AlertDialog
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -7,6 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import com.example.seminar5.R
 import com.example.seminar5.databinding.FragmentInhomeBinding
+import com.example.seminar5.ui.createDialog
 import com.example.seminar5.ui.home.adapter.NowAdapter
 import com.example.seminar5.ui.home.adapter.PopularityAdapter
 import com.example.seminar5.ui.home.data.PopularityData
@@ -29,6 +31,7 @@ class InHomeFragment : Fragment() {
 
         initPopularityAdapter()
         initNowAdapter()
+        btnCreate()
         btnUp()
 
         return binding.root
@@ -174,6 +177,16 @@ class InHomeFragment : Fragment() {
         )
         nowAdapter.notifyDataSetChanged()
     }
+
+    private fun btnCreate(){
+        binding.btnCreate.setOnClickListener{
+            val mDialogView = LayoutInflater.from(context).inflate(R.layout.activity_create_dialog, null)
+            val mBuilder = AlertDialog.Builder(context)
+                .setView(mDialogView)
+            mBuilder.show()
+        }
+    }
+
 
     private fun btnUp() {
         binding.ivUp.setOnClickListener {
