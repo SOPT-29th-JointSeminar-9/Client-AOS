@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="322dp"
+    android:layout_height="100dp"
+    android:layout_marginStart="1dp"
+    android:layout_marginTop="8dp"
+    android:layout_marginRight="1dp"
+    android:layout_marginBottom="8dp"
+    android:background="@drawable/bg_rv_now">
+
+    <ImageView
+        android:id="@+id/iv_now_cover"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_now_room_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="9dp"
+        android:fontFamily="@font/applesdcothicneo"
+        android:textColor="@color/genie_black"
+        android:textSize="14sp"
+        app:layout_constraintStart_toEndOf="@+id/iv_now_cover"
+        app:layout_constraintTop_toTopOf="@+id/iv_now_cover"
+        tools:text="room title" />
+
+    <ImageView
+        android:id="@+id/iv_volumebar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:src="@drawable/ic_volumebar"
+        app:layout_constraintStart_toStartOf="@+id/tv_now_room_title"
+        app:layout_constraintTop_toBottomOf="@+id/tv_now_room_title" />
+
+    <TextView
+        android:id="@+id/tv_now_music"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="6dp"
+        android:fontFamily="@font/applesdcothicneo"
+        android:textColor="@color/genie_gray_4"
+        android:textSize="11sp"
+        app:layout_constraintStart_toEndOf="@+id/iv_volumebar"
+        app:layout_constraintTop_toTopOf="@+id/iv_volumebar"
+        tools:text="now_music" />
+
+    <TextView
+        android:id="@+id/tv_now_user"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:fontFamily="@font/applesdcothicneo"
+        android:textColor="@color/genie_gray_4"
+        android:textSize="9sp"
+        app:layout_constraintStart_toStartOf="@+id/iv_volumebar"
+        app:layout_constraintTop_toBottomOf="@+id/iv_volumebar"
+        tools:text="user" />
+
+    <TextView
+        android:id="@+id/tv_slash"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="9dp"
+        android:fontFamily="@font/applesdcothicneo"
+        android:text="|"
+        android:textColor="@color/genie_gray_4"
+        android:textSize="9sp"
+        app:layout_constraintStart_toEndOf="@+id/tv_now_user"
+        app:layout_constraintTop_toTopOf="@+id/tv_now_user" />
+
+    <TextView
+        android:id="@+id/tv_now_fan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="9dp"
+        android:fontFamily="@font/applesdcothicneo"
+        android:text="@string/fan"
+        android:textColor="@color/genie_gray"
+        android:textSize="9sp"
+        app:layout_constraintStart_toEndOf="@+id/tv_slash"
+        app:layout_constraintTop_toTopOf="@+id/tv_slash" />
+
+    <TextView
+        android:id="@+id/tv_now_fan_amount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="1dp"
+        android:fontFamily="@font/applesdcothicneo"
+        android:textColor="@color/genie_main"
+        android:textSize="9sp"
+        app:layout_constraintStart_toEndOf="@+id/tv_now_fan"
+        app:layout_constraintTop_toTopOf="@+id/tv_now_fan"
+        tools:text="fan" />
+
+    <TextView
+        android:id="@+id/tv_now_listener"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="9dp"
+        android:fontFamily="@font/applesdcothicneo"
+        android:text="@string/listener"
+        android:textColor="@color/genie_gray"
+        android:textSize="9sp"
+        app:layout_constraintStart_toEndOf="@+id/tv_now_fan_amount"
+        app:layout_constraintTop_toTopOf="@+id/tv_now_fan_amount" />
+
+    <TextView
+        android:id="@+id/tv_now_listener_amount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="3dp"
+        android:fontFamily="@font/applesdcothicneo"
+        android:textColor="@color/genie_main"
+        android:textSize="9sp"
+        app:layout_constraintStart_toEndOf="@+id/tv_now_listener"
+        app:layout_constraintTop_toTopOf="@+id/tv_now_listener"
+        tools:text="listener" />
+</androidx.constraintlayout.widget.ConstraintLayout>
