@@ -83,6 +83,18 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/btn_create" />
 
+            <TextView
+                android:id="@+id/tv_now_cnt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:fontFamily="@font/applesdcothicneo"
+                android:text="25"
+                android:textColor="@color/genie_main"
+                android:textSize="19sp"
+                app:layout_constraintStart_toEndOf="@+id/tv_now"
+                app:layout_constraintTop_toTopOf="@+id/tv_now" />
+
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/rv_now"
                 android:layout_width="0dp"
