@@ -21,7 +21,7 @@ class NowAdapter : RecyclerView.Adapter<NowAdapter.NowViewHolder>(){
         return NowViewHolder(binding)
     }
 
-    override fun onBindViewHolder(holder: NowAdapter.NowViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: NowViewHolder, position: Int) {
         holder.onBind(nowList[position])
     }
 
@@ -32,11 +32,11 @@ class NowAdapter : RecyclerView.Adapter<NowAdapter.NowViewHolder>(){
                 fun onBind(data: PopularityData) {
                     binding.apply {
                         ivNowCover.setImageResource(data.cover)
-                        tvNowRoomTitle.setText(data.room_title)
-                        tvNowMusic.setText(data.music_title + " - " + data.artist)
-                        tvNowUser.setText(data.user_name)
-                        tvNowFanAmount.setText(data.fan_amount)
-                        tvNowListenerAmount.setText(data.listener_amount)
+                        tvNowRoomTitle.text=data.room_title
+                        tvNowMusic.text=data.music_title + " - " + data.artist
+                        tvNowUser.text=data.user_name
+                        tvNowFanAmount.text=data.fan_amount
+                        tvNowListenerAmount.text=data.listener_amount.toString()
                     }
                 }
             }
