@@ -46,6 +46,7 @@ class MenuFragment : Fragment() {
         tabViewPager.fragments.addAll(fragmentList)
 
         binding.vpTop.adapter = tabViewPager
+        binding.vpTop.isSaveEnabled = false
     }
 
 
