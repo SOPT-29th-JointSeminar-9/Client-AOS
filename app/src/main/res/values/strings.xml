@@ -24,6 +24,10 @@
     <string name="fan">팬</string>
     <string name="listener">청취자수</string>
 
+    <!--music player-->
+    <string name="title">춤의왕</string>
+    <string name="singer">차세대</string>
+
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
