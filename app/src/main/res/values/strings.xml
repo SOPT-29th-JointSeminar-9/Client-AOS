@@ -30,4 +30,11 @@
 
     <string name="hello_first_fragment">Hello first fragment</string>
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+
+<!--    Strings used for chatting information-->
+    <string name="musichug_started">지니의 재생목록으로 뮤직허그가 시작되었습니다.</string>
+    <string name="chatting_information">채팅 내용은 별도 저장되지 않으며,\n욕설·혐오·비방 표현은 제재될 수 있습니다.</string>
+    <string name="send">전송</string>
+    <string name="title">나만의 뮤직허그</string>
+    <string name="input_hint">대화를 입력해주세요</string>
 </resources>

@@ -3,13 +3,22 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/brian/AndroidStudioProjects/Client-AOS/app/src/main/res/drawable/button_send.xml" value="0.19635416666666666" />
+        <entry key="..\:/Users/brian/AndroidStudioProjects/Client-AOS/app/src/main/res/drawable/ic_main_back.xml" value="0.19635416666666666" />
+        <entry key="..\:/Users/brian/AndroidStudioProjects/Client-AOS/app/src/main/res/drawable/ic_main_foryou.xml" value="0.19635416666666666" />
+        <entry key="..\:/Users/brian/AndroidStudioProjects/Client-AOS/app/src/main/res/drawable/ic_main_home.xml" value="0.19635416666666666" />
+        <entry key="..\:/Users/brian/AndroidStudioProjects/Client-AOS/app/src/main/res/drawable/ic_main_menu.xml" value="0.19635416666666666" />
+        <entry key="..\:/Users/brian/AndroidStudioProjects/Client-AOS/app/src/main/res/drawable/ic_main_mymusic.xml" value="0.19635416666666666" />
+        <entry key="..\:/Users/brian/AndroidStudioProjects/Client-AOS/app/src/main/res/drawable/ic_main_search.xml" value="0.19635416666666666" />
         <entry key="..\:/Users/brian/AndroidStudioProjects/Client-AOS/app/src/main/res/drawable/rectangle_chat_bubble.xml" value="0.26979166666666665" />
         <entry key="..\:/Users/brian/AndroidStudioProjects/Client-AOS/app/src/main/res/drawable/rectangle_mychat_bubble.xml" value="0.26979166666666665" />
         <entry key="..\:/Users/brian/AndroidStudioProjects/Client-AOS/app/src/main/res/drawable/rectangle_otherchat_bubble.xml" value="0.26979166666666665" />
-        <entry key="..\:/Users/brian/AndroidStudioProjects/Client-AOS/app/src/main/res/layout/activity_chatting.xml" value="0.16" />
+        <entry key="..\:/Users/brian/AndroidStudioProjects/Client-AOS/app/src/main/res/font/applesdcothicneo.xml" value="0.21041666666666667" />
+        <entry key="..\:/Users/brian/AndroidStudioProjects/Client-AOS/app/src/main/res/layout/activity_chatting.xml" value="0.7867528271405493" />
         <entry key="..\:/Users/brian/AndroidStudioProjects/Client-AOS/app/src/main/res/layout/activity_main.xml" value="0.1296875" />
+        <entry key="..\:/Users/brian/AndroidStudioProjects/Client-AOS/app/src/main/res/layout/fragment_chat.xml" value="0.25364583333333335" />
         <entry key="..\:/Users/brian/AndroidStudioProjects/Client-AOS/app/src/main/res/layout/mychat_bubble_shape.xml" value="0.264" />
-        <entry key="..\:/Users/brian/AndroidStudioProjects/Client-AOS/app/src/main/res/layout/otherchat_bubble_shape.xml" value="0.264" />
+        <entry key="..\:/Users/brian/AndroidStudioProjects/Client-AOS/app/src/main/res/layout/otherchat_bubble_shape.xml" value="0.2" />
       </map>
     </option>
   </component>
