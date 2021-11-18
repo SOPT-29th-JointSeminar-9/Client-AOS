@@ -7,7 +7,9 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.example.seminar5.R
+import com.example.seminar5.databinding.FragmentCreateDialogBinding
 import com.example.seminar5.databinding.FragmentInhomeBinding
+import com.example.seminar5.ui.CreateDialogFragment
 import com.example.seminar5.ui.home.adapter.NowAdapter
 import com.example.seminar5.ui.home.adapter.PopularityAdapter
 import com.example.seminar5.ui.home.data.PopularityData
@@ -179,10 +181,7 @@ class InHomeFragment : Fragment() {
 
     private fun btnCreate(){
         binding.btnCreate.setOnClickListener{
-            val DialogView = LayoutInflater.from(context).inflate(R.layout.fragment_create_dialog, null)
-            val Builder = AlertDialog.Builder(context)
-                .setView(DialogView)
-            Builder.show()
+            CreateDialogFragment().show(childFragmentManager,"")
         }
     }
 

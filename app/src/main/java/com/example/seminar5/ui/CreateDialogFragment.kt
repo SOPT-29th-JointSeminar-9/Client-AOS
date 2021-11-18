@@ -25,7 +25,7 @@ class CreateDialogFragment : DialogFragment() {
         )
 
         binding.btnCancel.setOnClickListener {
-            dismiss() // TODO : 이 부분이 동작 안됨
+            dismiss()
         }
         binding.btnListen.setOnClickListener {
             //TODO : 채팅방과 연결해야 함
