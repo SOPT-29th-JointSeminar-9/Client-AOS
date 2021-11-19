@@ -55,7 +55,7 @@
             android:layout_marginTop="46dp"
             android:layout_marginEnd="55dp"
             android:fontFamily="@font/applesdcothicneo"
-            android:text="@string/title"
+            android:text="@string/chattingTitle"
             android:textColor="@color/genie_black"
             android:textSize="16sp"
             app:layout_constraintEnd_toStartOf="@+id/imageView5"
