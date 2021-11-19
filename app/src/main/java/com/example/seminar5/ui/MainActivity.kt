@@ -17,19 +17,11 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         initBottomNavigation()
-        //initProGressBar()
-
         initAnimation()
 
     }
 
-   /* private fun initProGressBar(){
 
-
-
-
-
-    }*/
 
     private fun initAnimation(){
         binding.progressbar.max = 1000
@@ -39,13 +31,6 @@ class MainActivity : AppCompatActivity() {
             .start()
 
 
-
-    }
-
-    private fun initButtonClick(){
-        binding.btnPause.setOnClickListener {
-
-        }
     }
 
 
@@ -82,9 +67,6 @@ class MainActivity : AppCompatActivity() {
 
             }
             true
-
-
-
 
 
         }
