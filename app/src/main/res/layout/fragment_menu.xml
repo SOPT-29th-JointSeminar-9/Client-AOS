@@ -30,9 +30,19 @@
         app:layout_constraintStart_toEndOf="@id/btn_back"
         />
 
+
+    <ImageView
+        android:id="@+id/iv_profile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/img_main_profile"
+        android:layout_marginEnd="19dp"
+        app:layout_constraintTop_toTopOf="@id/tv_musichug"
+        app:layout_constraintEnd_toEndOf="parent" />
+
     <com.google.android.material.tabs.TabLayout
         android:id="@+id/tl_top"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:theme="@style/TabLayout"
         tools:ignore="SpeakableTextPresentCheck"

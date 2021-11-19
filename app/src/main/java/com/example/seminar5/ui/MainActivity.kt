@@ -38,11 +38,14 @@ class MainActivity : AppCompatActivity() {
             .setDuration(33000)
             .start()
 
-        /*ObjectAnimator.ofFloat(binding.progressbar,"translationX", 100f).apply {
-            duration = 30000
-            binding.progressbar.progress  = 20
-            start()
-        }*/
+
+
+    }
+
+    private fun initButtonClick(){
+        binding.btnPause.setOnClickListener {
+
+        }
     }
 
 
