@@ -8,18 +8,5 @@
     tools:context=".ui.bottom.ForyouFragment">
 
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:text="@string/foryou"
-        android:textSize="30sp"
-        android:fontFamily="@font/applesdcothicneo"
-        android:layout_marginHorizontal="100dp"
-        android:layout_marginVertical="100dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
