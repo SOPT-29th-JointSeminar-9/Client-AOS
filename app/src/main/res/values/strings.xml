@@ -18,6 +18,23 @@
     <!--inhome fragment-->
     <string name="popularity">실시간 인기</string>
     <string name="now">최신</string>
+    <string name="create">개설하기</string>
+
+    <!--item_list-->
+    <string name="fan">팬</string>
+    <string name="listener">청취자수</string>
+
+    <!--music player-->
+    <string name="title">춤의왕</string>
+    <string name="singer">차세대</string>
+
+    <!--dialog-->
+    <string name="room_name_hint">나만의 뮤직허그 방명을 입력하세요.</string>
+    <string name="maxlength">최대 20자까지 입력 가능합니다.</string>
+    <string name="editnickname">닉네임 변경은 내정보>설정에서 가능합니다.</string>
+    <string name="listen">듣기</string>
+    <string name="cancel">취소</string>
+
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>

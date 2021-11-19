@@ -26,7 +26,5 @@
         android:id="@+id/menu_menu"
         android:icon="@drawable/ic_main_menu"
         android:title="@string/menu"/>
-
-
-
 </menu>
+

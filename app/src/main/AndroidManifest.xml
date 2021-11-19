@@ -25,6 +25,11 @@
 
         <activity
             android:name=".ui.MainActivity"
+        <activity
+            android:name=".ui.createDialog"
+            android:exported="false" />
+        <activity
+            android:name=".ui.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

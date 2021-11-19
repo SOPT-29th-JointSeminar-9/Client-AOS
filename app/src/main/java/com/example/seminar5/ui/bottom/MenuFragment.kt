@@ -16,7 +16,7 @@ import com.google.android.material.tabs.TabLayoutMediator
 
 
 class MenuFragment : Fragment() {
-    private var _binding : FragmentMenuBinding ?= null
+    private var _binding: FragmentMenuBinding? = null
     private val binding get() = _binding ?: error("뷰 참조를 위해 바인딩이 초기화되지 않음")
     private lateinit var tabViewPager: TabViewPager
 
@@ -36,7 +36,6 @@ class MenuFragment : Fragment() {
         return binding.root
 
 
-
     }
 
 
@@ -47,19 +46,21 @@ class MenuFragment : Fragment() {
         tabViewPager.fragments.addAll(fragmentList)
 
         binding.vpTop.adapter = tabViewPager
+        binding.vpTop.isSaveEnabled = false
     }
 
 
     private fun initTabLayout() {
 
-        val tabLabel = listOf("홈", "DJ차트","친구")
+        val tabLabel = listOf("홈", "DJ차트", "친구")
 //R.string.home,R.string.djchat,R.string.friend
         TabLayoutMediator(binding.tlTop, binding.vpTop) {
 
-            tab , position ->
+                tab, position ->
             tab.text = tabLabel[position]
         }.attach()
 
+        binding.vpTop.isUserInputEnabled = false // swipe 막기
     }
 
     override fun onDestroy() {
