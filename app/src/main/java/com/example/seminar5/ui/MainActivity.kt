@@ -1,7 +1,10 @@
 package com.example.seminar5.ui
 
+import android.animation.ObjectAnimator
+import android.animation.ValueAnimator
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.SeekBar
 import com.example.seminar5.R
 import com.example.seminar5.databinding.ActivityMainBinding
 import com.example.seminar5.ui.bottom.*
@@ -14,7 +17,32 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         initBottomNavigation()
+        //initProGressBar()
 
+        initAnimation()
+
+    }
+
+   /* private fun initProGressBar(){
+
+
+
+
+
+    }*/
+
+    private fun initAnimation(){
+        binding.progressbar.max = 1000
+
+        ObjectAnimator.ofInt(binding.progressbar, "progress",1000)
+            .setDuration(33000)
+            .start()
+
+        /*ObjectAnimator.ofFloat(binding.progressbar,"translationX", 100f).apply {
+            duration = 30000
+            binding.progressbar.progress  = 20
+            start()
+        }*/
     }
 
 
