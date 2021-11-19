@@ -46,6 +46,7 @@
         android:layout_height="wrap_content"
         android:theme="@style/TabLayout"
         tools:ignore="SpeakableTextPresentCheck"
+        app:tabIndicator="@drawable/tab_seletor"
         app:tabSelectedTextColor="@color/genie_black"
         app:tabIndicatorColor="@color/genie_black"
         app:tabTextColor="@color/genie_gray"
