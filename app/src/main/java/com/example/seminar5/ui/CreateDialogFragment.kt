@@ -1,5 +1,6 @@
 package com.example.seminar5.ui
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -9,6 +10,7 @@ import androidx.fragment.app.DialogFragment
 import com.example.seminar5.R
 import com.example.seminar5.databinding.FragmentCreateDialogBinding
 import com.example.seminar5.databinding.FragmentInhomeBinding
+import com.example.seminar5.ui.Chatting.ChattingActivity
 
 class CreateDialogFragment : DialogFragment() {
     private var _binding: FragmentCreateDialogBinding? = null
@@ -28,7 +30,8 @@ class CreateDialogFragment : DialogFragment() {
             dismiss()
         }
         binding.btnListen.setOnClickListener {
-            //TODO : 채팅방과 연결해야 함
+            val intent = Intent(requireContext(), ChattingActivity::class.java)
+            startActivity(intent)
         }
 
         return binding.root
