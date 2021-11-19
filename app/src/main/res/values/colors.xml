@@ -8,5 +8,6 @@
     <color name="genie_black">#FF000000</color>
     <color name="genie_gray">#8A8A8C</color>
     <color name="genie_blue">#3D96F7</color>
+    <color name="light_gray">#E5E5E5</color>
     <color name="white">#FFFFFFFF</color>
 </resources>

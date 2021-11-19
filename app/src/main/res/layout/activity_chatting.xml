@@ -7,14 +7,15 @@
     tools:context=".ui.Chatting.ChattingActivity">
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/cl_chatting_view"
+        android:id="@+id/cl_top"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        app:layout_constraintBottom_toTopOf="@+id/cl_input_text"
-        app:layout_constraintStart_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        android:paddingBottom="5dp"
+        android:background="@color/light_gray"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0">
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toEndOf="parent"
+        >
 
         <ImageView
             android:id="@+id/iv_main_back"
@@ -26,20 +27,15 @@
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/ic_main_back" />
 
-        <TextView
-            android:id="@+id/tv_title"
+        <ImageView
+            android:id="@+id/imageView6"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="91dp"
-            android:layout_marginTop="46dp"
-            android:layout_marginEnd="55dp"
-            android:text="@string/title"
-            android:fontFamily="@font/applesdcothicneo"
-            android:textColor="@color/genie_black"
-            android:textSize="16sp"
-            app:layout_constraintEnd_toStartOf="@+id/imageView5"
-            app:layout_constraintStart_toEndOf="@+id/iv_main_back"
-            app:layout_constraintTop_toTopOf="parent" />
+            android:layout_marginTop="48dp"
+            android:layout_marginEnd="19dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_main_menu" />
 
         <ImageView
             android:id="@+id/imageView5"
@@ -51,42 +47,144 @@
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/ic_main_search" />
 
-        <ImageView
-            android:id="@+id/imageView6"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="48dp"
-            android:layout_marginEnd="19dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/ic_main_menu" />
-
         <TextView
-            android:id="@+id/tv_started"
+            android:id="@+id/tv_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="35dp"
-            android:text="@string/musichug_started"
+            android:layout_marginStart="91dp"
+            android:layout_marginTop="46dp"
+            android:layout_marginEnd="55dp"
             android:fontFamily="@font/applesdcothicneo"
-            android:textColor="@color/genie_gray"
-            android:textSize="11sp"
+            android:text="@string/title"
+            android:textColor="@color/genie_black"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toStartOf="@+id/imageView5"
+            app:layout_constraintStart_toEndOf="@+id/iv_main_back"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_chatting_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@color/light_gray"
+        app:layout_constraintBottom_toTopOf="@+id/cl_input_text"
+        app:layout_constraintStart_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cl_top"
+        app:layout_constraintVertical_bias="1.0">
+
+
+
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tv_title" />
+            app:layout_constraintTop_toTopOf="parent">
 
-        <TextView
-            android:id="@+id/tv_chatting_information"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="14dp"
-            android:gravity="center"
-            android:text="@string/chatting_information"
-            android:textColor="@color/genie_gray"
-            android:textSize="11sp"
-            android:fontFamily="@font/applesdcothicneo"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tv_started" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:descendantFocusability="blocksDescendants">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/cl_floating_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="19dp"
+                    android:layout_marginBottom="12dp"
+                    android:background="@drawable/floating_button"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent">
+
+                    <ImageView
+                        android:id="@+id/imageView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginBottom="4dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/ic_chat_profile" />
+
+                    <TextView
+                        android:id="@+id/textView3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="14dp"
+                        android:layout_marginEnd="5dp"
+                        android:layout_marginBottom="13dp"
+                        android:text="0"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@id/imageView2"
+                        app:layout_constraintStart_toEndOf="@id/imageView"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageView
+                        android:id="@+id/imageView2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="14dp"
+                        android:layout_marginEnd="11dp"
+                        android:layout_marginBottom="15dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/ic_chat_listener" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvChat"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="18dp"
+                    android:overScrollMode="never"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_chatting_information"
+                    app:stackFromEnd="true"
+                    tools:itemCount="3"
+                    tools:listitem="@layout/mychat_bubble_shape" />
+
+                <TextView
+                    android:id="@+id/tv_started"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:fontFamily="@font/applesdcothicneo"
+                    android:text="@string/musichug_started"
+                    android:textColor="@color/genie_gray"
+                    android:textSize="11sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tv_chatting_information"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="14dp"
+                    android:fontFamily="@font/applesdcothicneo"
+                    android:gravity="center"
+                    android:text="@string/chatting_information"
+                    android:textColor="@color/genie_gray"
+                    android:textSize="11sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_started" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.core.widget.NestedScrollView>
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
