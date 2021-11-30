@@ -1,7 +1,4 @@
-package com.example.seminar5
-
-import org.w3c.dom.Text
-import java.sql.Timestamp
+package com.example.seminar5.ui.home.data
 
 data class ResponseNowData(
     val status: Number,

@@ -8,7 +8,7 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import com.example.seminar5.R
-import com.example.seminar5.ResponseNowData
+import com.example.seminar5.ui.home.data.ResponseNowData
 import com.example.seminar5.ServiceCreator
 import com.example.seminar5.databinding.FragmentInhomeBinding
 import com.example.seminar5.ui.CreateDialogFragment
@@ -24,7 +24,6 @@ class InHomeFragment : Fragment() {
     private lateinit var nowAdapter: NowAdapter
     private var _binding: FragmentInhomeBinding? = null
     private val binding get() = _binding ?: error("에러에러")
-    //private lateinit var nowList: MutableList<ResponseNowData>
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -121,45 +120,6 @@ class InHomeFragment : Fragment() {
                 if (response.isSuccessful) {
                     val data = response.body()
                     if (data != null) {
-//                        for (i in data.data) {
-//                            val id = i.id
-//                            val hugTitle = i.hugTitle
-//                            val nickname = i.nickname
-//                            val fanCount = i.fanCount
-//                            val listenerCount = i.listenerCount
-//                            val sentTime = i.sentTime
-//                            val musicTitle = i.musicTitle
-//                            val artist = i.artist
-//                            val cover = i.cover
-//
-//                            val newData = ResponseNowData(
-//                                status,
-//                                success,
-//                                message,
-//                                listOf(ResponseNowData.Object(id,
-//                                hugTitle,
-//                                nickname,
-//                                fanCount,
-//                                listenerCount,
-//                                sentTime,
-//                                musicTitle,
-//                                artist,
-//                                cover))
-//                            )
-                               /* List(
-                                    id,
-                                    hugTitle,
-                                    nickname,
-                                    fanCount,
-                                    listenerCount,
-                                    sentTime,
-                                    musicTitle,
-                                    artist,
-                                    cover
-                                )*/
-                            //)
-                            //nowList.add(newData)
-                        //}
                         nowAdapter.nowList.addAll(data.data)
                         nowAdapter.notifyDataSetChanged() //Adapter에 값이 바뀔 때 바로 호출하는 것이 좋음
                     } else { }
@@ -182,7 +142,6 @@ class InHomeFragment : Fragment() {
             CreateDialogFragment().show(childFragmentManager, "")
         }
     }
-
 
     private fun btnUp() {
         binding.ivUp.setOnClickListener {

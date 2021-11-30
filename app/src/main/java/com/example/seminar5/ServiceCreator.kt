@@ -12,4 +12,5 @@ object ServiceCreator {
         .build()
 
     val getNowService: GetNowService = retrofit.create(GetNowService::class.java)
+    val postHugService: PostHugService = retrofit.create(PostHugService::class.java)
 }
