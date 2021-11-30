@@ -186,7 +186,7 @@ class InHomeFragment : Fragment() {
 
     private fun btnUp() {
         binding.ivUp.setOnClickListener {
-            binding.scrollview.scrollTo(0, binding.view.top)
+            binding.scrollview.smoothScrollTo(0, binding.view.top)
         }
     }
 
