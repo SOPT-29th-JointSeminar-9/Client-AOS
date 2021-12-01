@@ -8,7 +8,7 @@ import retrofit2.http.Headers
 import retrofit2.http.POST
 
 interface PostHugService {
-    @Headers("Content-Type:application/x-www-form-urlencoded")
+    @Headers("Content-Type:application/json")
     @POST("radio")
     fun postHug(
         @Body body: RequestCreateHugData
