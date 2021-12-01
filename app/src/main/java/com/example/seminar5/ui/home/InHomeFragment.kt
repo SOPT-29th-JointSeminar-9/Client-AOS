@@ -8,7 +8,7 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import com.example.seminar5.R
-import com.example.seminar5.ui.home.data.ResponseNowData
+import com.example.seminar5.ResponseNowData
 import com.example.seminar5.ServiceCreator
 import com.example.seminar5.databinding.FragmentInhomeBinding
 import com.example.seminar5.ui.CreateDialogFragment
