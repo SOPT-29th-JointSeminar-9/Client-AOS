@@ -4,6 +4,7 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.seminar5.databinding.MychatBubbleShapeBinding
+import com.example.seminar5.ui.Chatting.Data.ChatData
 
 class MyNewAdapter:RecyclerView.Adapter<MyNewAdapter.MyNewViewHolder>() {
     val chatList = mutableListOf<ChatData>()

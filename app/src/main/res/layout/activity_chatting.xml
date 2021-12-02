@@ -154,7 +154,7 @@
                     app:layout_constraintTop_toBottomOf="@+id/tv_chatting_information"
                     app:stackFromEnd="true"
                     tools:itemCount="3"
-                    tools:listitem="@layout/mychat_bubble_shape" />
+                    tools:listitem="@layout/musichug_bubble_shape" />
 
                 <TextView
                     android:id="@+id/tv_started"
