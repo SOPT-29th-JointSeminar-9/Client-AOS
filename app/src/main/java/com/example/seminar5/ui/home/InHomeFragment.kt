@@ -122,6 +122,7 @@ class InHomeFragment : Fragment() {
                     if (data != null) {
                         nowAdapter.nowList.addAll(data.data)
                         nowAdapter.notifyDataSetChanged() //Adapter에 값이 바뀔 때 바로 호출하는 것이 좋음
+                        binding.tvNowCnt.setText(data.data.size.toString())
                     } else { }
                 } else {
                     Log.d("fail", response?.message())
