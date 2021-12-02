@@ -3,11 +3,12 @@ package com.example.seminar5.ui.home.adapter
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
+import com.example.seminar5.ResponseNowData
 import com.example.seminar5.databinding.ItemNowListBinding
-import com.example.seminar5.ui.home.data.PopularityData
 
 class NowAdapter : RecyclerView.Adapter<NowAdapter.NowViewHolder>(){
-    val nowList = mutableListOf<PopularityData>()
+    val nowList = mutableListOf<ResponseNowData.Object>()
 
     override fun onCreateViewHolder(
         parent: ViewGroup,
@@ -29,14 +30,17 @@ class NowAdapter : RecyclerView.Adapter<NowAdapter.NowViewHolder>(){
 
     class NowViewHolder(private val binding: ItemNowListBinding) :
             RecyclerView.ViewHolder(binding.root) {
-                fun onBind(data: PopularityData) {
+                fun onBind(data: ResponseNowData.Object) {
                     binding.apply {
-                        ivNowCover.setImageResource(data.cover)
-                        tvNowRoomTitle.text=data.room_title
-                        tvNowMusic.text=data.music_title + " - " + data.artist
-                        tvNowUser.text=data.user_name
-                        tvNowFanAmount.text=data.fan_amount
-                        tvNowListenerAmount.text=data.listener_amount.toString()
+                        Glide.with(ivNowCover) //여기는 context 쓰는 자리라 꼭 ivNowCover가 안 들어가도됨
+                            .load(data.cover)
+                            .into(binding.ivNowCover) //여기는 진짜로 들어갈 자리
+                        //ivNowCover.setImageURI(data.cover)
+                        tvNowRoomTitle.text=data.hugTitle
+                        tvNowMusic.text=data.musicTitle + " - " + data.artist
+                        tvNowUser.text=data.nickname
+                        tvNowFanAmount.text=data.fanCount
+                        tvNowListenerAmount.text=data.listenerCount.toString()
                     }
                 }
             }
