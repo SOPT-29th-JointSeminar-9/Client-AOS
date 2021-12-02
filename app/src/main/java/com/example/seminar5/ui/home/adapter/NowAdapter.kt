@@ -4,7 +4,7 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
-import com.example.seminar5.ResponseNowData
+import com.example.seminar5.ui.home.data.ResponseNowData
 import com.example.seminar5.databinding.ItemNowListBinding
 
 class NowAdapter : RecyclerView.Adapter<NowAdapter.NowViewHolder>(){
