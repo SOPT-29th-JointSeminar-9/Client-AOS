@@ -12,8 +12,8 @@
 
     <ImageView
         android:id="@+id/iv_now_cover"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
         android:layout_marginStart="15dp"
         android:layout_marginTop="15dp"
         app:layout_constraintStart_toStartOf="parent"
@@ -21,12 +21,14 @@
 
     <TextView
         android:id="@+id/tv_now_room_title"
-        android:layout_width="wrap_content"
+        android:layout_width="210dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="9dp"
         android:fontFamily="@font/applesdcothicneo"
         android:textColor="@color/genie_black"
         android:textSize="14sp"
+        android:lines="1"
+        android:ellipsize="end"
         app:layout_constraintStart_toEndOf="@+id/iv_now_cover"
         app:layout_constraintTop_toTopOf="@+id/iv_now_cover"
         tools:text="room title" />
@@ -42,12 +44,14 @@
 
     <TextView
         android:id="@+id/tv_now_music"
-        android:layout_width="wrap_content"
+        android:layout_width="194dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="6dp"
         android:fontFamily="@font/applesdcothicneo"
         android:textColor="@color/genie_gray_4"
         android:textSize="11sp"
+        android:lines="1"
+        android:ellipsize="end"
         app:layout_constraintStart_toEndOf="@+id/iv_volumebar"
         app:layout_constraintTop_toTopOf="@+id/iv_volumebar"
         tools:text="now_music" />

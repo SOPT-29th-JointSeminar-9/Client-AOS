@@ -1,18 +1,23 @@
 package com.example.seminar5.ui.home
 
-import android.app.AlertDialog
 import android.os.Bundle
-import androidx.fragment.app.Fragment
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
+import androidx.fragment.app.Fragment
 import com.example.seminar5.R
-import com.example.seminar5.databinding.FragmentCreateDialogBinding
+import com.example.seminar5.ui.home.data.ResponseNowData
+import com.example.seminar5.ServiceCreator
 import com.example.seminar5.databinding.FragmentInhomeBinding
 import com.example.seminar5.ui.CreateDialogFragment
 import com.example.seminar5.ui.home.adapter.NowAdapter
 import com.example.seminar5.ui.home.adapter.PopularityAdapter
 import com.example.seminar5.ui.home.data.PopularityData
+import retrofit2.Call
+import retrofit2.Callback
+import retrofit2.Response
 
 class InHomeFragment : Fragment() {
     private lateinit var popularityAdapter: PopularityAdapter
@@ -31,7 +36,8 @@ class InHomeFragment : Fragment() {
         )
 
         initPopularityAdapter()
-        initNowAdapter()
+        initNowAdapter() //Adapter가 먼저 초기화된 상태에서 
+        initNowNetwork() //네트워크 연결해야함
         btnCreate()
         btnUp()
 
@@ -98,97 +104,49 @@ class InHomeFragment : Fragment() {
     }
 
     private fun initNowAdapter() {
-        nowAdapter = NowAdapter()
-
+        nowAdapter = NowAdapter() //Adapter 초기화
         binding.rvNow.adapter = nowAdapter
-
-        nowAdapter.nowList.addAll(
-            listOf(
-                PopularityData(
-                    R.drawable.img_now_cover1,
-                    0,
-                    "Savage",
-                    "aespa",
-                    "에스파 팬이라면 퍼가 ㅋ",
-                    "에스파는나야둘이될수없어",
-                    "29",
-                    2
-                ),
-                PopularityData(
-                    R.drawable.img_now_cover2,
-                    0,
-                    "새삼스럽게 왜",
-                    "AKMU(악뮤)",
-                    "음색깡패들과 함께 고막호강",
-                    "hawonow",
-                    "12",
-                    5
-                ),
-                PopularityData(
-                    R.drawable.img_now_cover3,
-                    0,
-                    "사람의 마음",
-                    "장기하와 얼굴들",
-                    "집으로 돌아가는 길, 노래 한 스푼",
-                    "나의라임오지는나무",
-                    "3",
-                    1
-                ),
-                PopularityData(
-                    R.drawable.img_now_cover4,
-                    0,
-                    "문득",
-                    "BE'O(비오)",
-                    "배가 고파서 밥\uD83C\uDF5A을 차렸는데",
-                    "생갈치1호의행방불명",
-                    "529",
-                    32
-                ),
-                PopularityData(
-                    R.drawable.img_now_cover5,
-                    0,
-                    "Island",
-                    "10CM",
-                    "타이틀만큼 좋은 수록곡 Playlist",
-                    "danborii",
-                    "0",
-                    7
-                ),
-                PopularityData(
-                    R.drawable.img_now_cover6,
-                    0,
-                    "미안해 (Feat. Beenzino)",
-                    "Zion.T",
-                    "사과를 할 때는 이 노래를 틀어주세요",
-                    "oe9day",
-                    "3",
-                    84
-                ),
-                PopularityData(
-                    R.drawable.img_now_cover7,
-                    0,
-                    "True Romance",
-                    "Citizens!",
-                    "우리가 사랑했던 \uD83C\uDFA7 OST",
-                    "그대내게햄버거주는사람",
-                    "0",
-                    3
-                )
-            )
-        )
-        nowAdapter.notifyDataSetChanged()
     }
 
-    private fun btnCreate(){
-        binding.btnCreate.setOnClickListener{
-            CreateDialogFragment().show(childFragmentManager,"")
+    private fun initNowNetwork() {
+        val call: Call<ResponseNowData> =
+            ServiceCreator.getNowService.getNowData()
+
+        call.enqueue(object : Callback<ResponseNowData> {
+            override fun onResponse(
+                call: Call<ResponseNowData>,
+                response: Response<ResponseNowData>
+            ) {
+                if (response.isSuccessful) {
+                    val data = response.body()
+                    if (data != null) {
+                        nowAdapter.nowList.addAll(data.data)
+                        nowAdapter.notifyDataSetChanged() //Adapter에 값이 바뀔 때 바로 호출하는 것이 좋음
+                        binding.tvNowCnt.setText(data.data.size.toString())
+                    } else { }
+                } else {
+                    Log.d("fail", response?.message())
+                }
+            }
+
+            override fun onFailure(call: Call<ResponseNowData>, t: Throwable) {
+                //에러 처리
+                Toast.makeText(context, "ERROR", Toast.LENGTH_LONG).show()
+                Log.e("NetworkTest", "error:$t")
+            }
+
+        })
+    }
+
+    private fun btnCreate() {
+        binding.btnCreate.setOnClickListener {
+            CreateDialogFragment().show(childFragmentManager, "")
         }
     }
 
-
     private fun btnUp() {
         binding.ivUp.setOnClickListener {
-            binding.scrollview.scrollTo(0, binding.view.top)
+            binding.scrollview.smoothScrollTo(0, binding.view.top)
         }
     }
 

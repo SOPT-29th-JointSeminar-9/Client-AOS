@@ -90,7 +90,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:fontFamily="@font/applesdcothicneo"
-                android:text="25"
+                tools:text="25"
                 android:textColor="@color/genie_main"
                 android:textSize="19sp"
                 app:layout_constraintStart_toEndOf="@+id/tv_now"

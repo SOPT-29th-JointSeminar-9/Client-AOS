@@ -13,17 +13,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Seminar5">
         <activity
-            android:name=".ui.Chatting.ChattingActivity"
-            android:exported="true"
-            android:label="@string/title_activity_chatting"
-            android:theme="@style/Theme.Seminar5.NoActionBar"
-
-            >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+            android:name=".ui.Chatting.ChattingActivity">
         </activity>
 
         <activity
