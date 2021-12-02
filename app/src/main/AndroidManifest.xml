@@ -15,6 +15,7 @@
         <activity
             android:name=".ui.Chatting.ChattingActivity">
         </activity>
+
         <activity
             android:name=".ui.MainActivity"
             android:exported="true">
