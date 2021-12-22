@@ -7,7 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.DialogFragment
-import com.example.seminar5.ServiceCreator
+import com.example.seminar5.ui.home.di.ServiceCreator
 import com.example.seminar5.databinding.FragmentCreateDialogBinding
 import com.example.seminar5.ui.Chatting.ChattingActivity
 import com.example.seminar5.ui.home.data.RequestCreateHugData

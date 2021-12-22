@@ -5,10 +5,10 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.seminar5.R
 import com.example.seminar5.databinding.ItemPopularityListBinding
-import com.example.seminar5.ui.home.data.PopularityData
+import com.example.seminar5.ui.home.data.ResponsePopularityData
 
 class PopularityAdapter : RecyclerView.Adapter<PopularityAdapter.PopularityViewHolder>() {
-    val popularityList = mutableListOf<PopularityData>()
+    val popularityList = mutableListOf<ResponsePopularityData.Data>()
 
     override fun onCreateViewHolder(
         parent: ViewGroup,
@@ -30,22 +30,23 @@ class PopularityAdapter : RecyclerView.Adapter<PopularityAdapter.PopularityViewH
 
     class PopularityViewHolder(private val binding: ItemPopularityListBinding) :
         RecyclerView.ViewHolder(binding.root) {
-        fun onBind(data: PopularityData) {
-            binding.ivCover.setImageResource(data.cover)
-            if (data.ranking == 1) {
+        fun onBind(data: ResponsePopularityData.Data) {
+
+           if (data.id == 1) {
                 binding.ivRanking.setImageResource(R.drawable.ic_ranking1)
-            } else if (data.ranking == 2) {
+            } else if (data.id == 10) {
                 binding.ivRanking.setImageResource(R.drawable.ic_ranking2)
-            } else if (data.ranking == 3) {
+            } else if (data.id == 2) {
                 binding.ivRanking.setImageResource(R.drawable.ic_ranking3)
             }
-            binding.tvMusicTitle.text = data.music_title
-            binding.tvArtist.text = data.artist
-            binding.tvRoomTitle.text = data.room_title
-            binding.tvFanAmount.text = data.fan_amount
-            binding.tvListenerAmount.text = data.listener_amount.toString()
-            binding.tvUserName.text = data.user_name
 
+            binding.tvRoomTitle.text = data.hugTitle
+            binding.tvUserName.text = data.nickname
+            binding.tvFanAmount.text = data.fanCount.toString()
+            binding.tvListenerAmount.text = data.listenerCount.toString()
+            binding.tvMusicTitle.text = data.musicTitle
+            binding.tvArtist.text = data.artist
+            binding.ivCover.setImageURI(data.cover)
         }
     }
 }
