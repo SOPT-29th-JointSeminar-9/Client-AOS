@@ -1,4 +1,4 @@
-package com.example.seminar5
+package com.example.seminar5.ui.home.di
 
 import com.example.seminar5.ui.home.data.ResponseNowData
 import retrofit2.Call

@@ -1,4 +1,4 @@
-package com.example.seminar5
+package com.example.seminar5.ui.home.di
 
 import com.example.seminar5.ui.home.data.RequestCreateHugData
 import com.example.seminar5.ui.home.data.ResponseCreateHugData

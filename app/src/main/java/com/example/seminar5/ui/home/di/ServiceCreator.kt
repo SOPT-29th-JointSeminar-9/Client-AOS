@@ -1,4 +1,4 @@
-package com.example.seminar5
+package com.example.seminar5.ui.home.di
 
 import com.google.gson.Gson
 import com.google.gson.GsonBuilder
@@ -18,4 +18,5 @@ object ServiceCreator {
 
     val getNowService: GetNowService = retrofit.create(GetNowService::class.java)
     val postHugService: PostHugService = retrofit.create(PostHugService::class.java)
+    val getPopularityService : GetPopularityService = retrofit.create(GetPopularityService::class.java)
 }
