@@ -37,6 +37,7 @@ class InHomeFragment : Fragment() {
         )
 
         initPopularityAdapter()
+        ininPopularityNetwork()
         initNowAdapter() //Adapter가 먼저 초기화된 상태에서 
         initNowNetwork() //네트워크 연결해야함
         btnCreate()
@@ -48,22 +49,7 @@ class InHomeFragment : Fragment() {
     private fun initPopularityAdapter() {
         popularityAdapter = PopularityAdapter()
         binding.rvPopularity.adapter = popularityAdapter
-        /*popularityAdapter.popularityList.addAll(
-            listOf(
-                PopularityData(
-                    R.drawable.img_popularity_cover1,
-                    1,
-                    "낮잠",
-                    "실리카겔",
-                    "나른한 오후,\n" + "햇살과 어울리는 음악\uD83C\uDF1E",
-                    "Mezinee",
-                    "35.4K",
-                    985
-                ),
-            )
-        )
-        popularityAdapter.notifyDataSetChanged()
-        */
+
     }
 
     private fun ininPopularityNetwork(){
